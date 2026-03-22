@@ -1,0 +1,98 @@
+body {
+     margin: 0;
+    min-height: 100vh;
+
+    /* image + color mix */
+    background:
+      linear-gradient(
+        rgba(102, 126, 234, 0.75),
+        rgba(102, 126, 234, 0.75)
+      ),
+      url("bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+}
+
+.details {
+    background:rgba(255,255,255,0.55);
+    padding:30px 40px;
+    border-radius:15px;
+    width:350px;
+    text-align:center;
+    box-shadow:0 10px 30px 
+    rgba(0,0,0,0.2)
+}
+
+.details input , .details select {
+    width:100%;
+    padding:8px;
+    margin:6px 0;
+    border-radius:6px;
+    border: 1px solid #ccc;
+}
+
+.details button {
+    margin-top: 10px;
+    padding:10px;
+    width:100%;
+    border:none;
+    border-radius:8px;
+    background: linear-gradient(to right, #ff9a3c,#ff6a00);
+    cursor:pointer;
+}
+
+.details label {
+    display:block;
+    text-align:left;
+    font-weight:600px;
+    margin-top:10px;
+    margin-bottom:4px;
+    color:black;
+}
+
+.heading {
+    text-align:center;
+    font-size:28px;
+    font-weight:600;
+    color:black;
+    margin-bottom:25px;
+    letter-spacing:0.5px;
+}
+
+.gender-row {
+    display: grid;
+    grid-template-columns: 100px auto;
+    align-items:center;
+    margin-bottom:8px;
+   
+}
+
+.gender label , .gender span {
+    display:block;
+    margin-left:0;
+    margin-top:6px;
+    text-align: left;
+}
+
+.details label.main{
+    margin-bottom:20px;
+}
+
+.details label.course {
+    margin-top:20px;
+}
+
+.gender {
+    color:black;
+}
+.op{
+    color:#ccc;
+}

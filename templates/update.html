@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>update details</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for ('static' , filename = 'update.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for ('static' , filename = 'common.css') }}"
+    />
+  </head>
+  <body>
+    <form
+      class="details"
+      action="{{url_for('update',id = user.id)}}"
+      method="POST"
+    >
+      <div class="text">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="fullname"
+          value="{{user.first_name}}{{user.last_name}}"
+        />
+      </div>
+      <br />
+      <div class="text">
+        <label for="mail">E-mail</label>
+        <input type="email" id="mail" name="email" value="{{user.email}}" />
+      </div>
+      <br />
+      <div class="text">
+        <label for="dob">Date of Birth</label>
+        <input
+          type="date"
+          id="dob"
+          name="dob"
+          value="{{user.date_of_birth.strftime('%Y-%m-%d')}}"
+        />
+      </div>
+      <br />
+      <div class="text">
+        <label for="gen">Gender</label>
+        <div class="gender">
+          <div class="gender-row">
+            <span>Male</span>
+            <input
+              type="radio"
+              name="gender"
+              value="Male"
+              { % if user.gender == "Male"% }checked{ %endif %}>Male
+          </div>
+          <div class="gender-row">
+            <span>Female</span>
+            <input
+              type="radio"
+              name="gender"
+              value="Female"
+              { % if user.gender == "Female"% }checked{ %endif %}>Female
+          </div>
+          <div class="gender-row">
+            <span>Others</span>
+            <input
+              type="radio"
+              name="gender"
+              value="Others"
+              { % if user.gender == "Others"% }checked{ %endif %}>Others
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="text">
+        <label for="scourse">Course</label>
+        <select id="course" name="course">
+          <option class="op" value="user.course">---Select Course---</option>
+          <option
+            value = "python"
+            { % if user.course == "python"% }selected{ %endif %}>python
+          </option>
+
+          <option
+            value="javascript"
+             { % if user.course == "javascript"% }selected{ %endif %}>javascript
+          </option>
+          <option
+            value="web development"
+             { % if user.course == "web development"% }selected{ %endif %}>web development
+          </option>
+          <option
+            value="Data science"
+             { % if user.course == "Data science"% }selected{ %endif %}>Data science
+          </option>
+          <option
+            value="Database"
+             { % if user.course == "Database"% }selected{ %endif %}>Database
+          </option>
+        </select>
+      </div>
+
+      <button class="button" type="submit">Save Changes</button>
+    </form>
+  </body>
+</html>

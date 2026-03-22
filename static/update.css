@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    /* image + color mix */
+    background:
+      linear-gradient(
+        rgba(102, 126, 234, 0.75),
+        rgba(102, 126, 234, 0.75)
+      ),
+      url("bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.details {
+    width:400px;
+    margin:40px auto 0;
+    padding:20px;
+    background:rgba(255,255,255,0.55);;
+    border-radius:12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-sizing:border-box;
+}
+
+.text{
+    font-size:20px;
+    gap:20px;
+
+}
+
+.text input{
+    color:rgba(0,0,0,0.6);
+}
+
+.button{
+    margin-top:20px;
+    background-color:#ff9a3c;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+.details label {
+    display:inline-block;
+    width:120px;
+    
+}
+
+.details input{
+    height:20px;
+    padding:4px 8px;
+    font-size:14px;
+}

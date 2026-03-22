@@ -1,0 +1,14 @@
+body{
+     background:
+      linear-gradient(
+        rgba(102, 126, 234, 0.75),
+        rgba(102, 126, 234, 0.75)
+      ),
+      url("img/bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display:flex;
+    min-height:100vh;
+}

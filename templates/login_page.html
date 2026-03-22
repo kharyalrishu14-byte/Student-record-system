@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_system</title>
+    <link rel="stylesheet" href="{{url_for ('static' , filename = 'login.css') }}">
+    <link rel="stylesheet" href="{{url_for ('static' , filename = 'common.css') }}">
+<body>
+    <div class="container">
+    {% if error %}
+    <p style = "color:red;font-weight:bold;">{{error}}</p>
+    {% endif %}
+  <form  class="login-form" action="/login" method="POST">
+    <h2>Student App - Login</h2>
+    <label for="username">Username</label><br>
+    <input type="text"  id="username"name = "username" placeholder="Enter username"><br>
+    <lable for="pass">Password</lable><br>
+    <input type="password" id="pass" name="password" placeholder="Enter password"><br>
+    <button class="button" type="Submit">Login</button>
+   </form>
+   <p class="register-text">
+    Don't have an account?
+    <a href="/register">Register</a>
+   </p>
+   </form>
+   </div>
+    
+</body>
+</html>

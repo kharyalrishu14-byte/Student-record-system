@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    /* image + color mix */
+    background:
+      linear-gradient(
+        rgba(102, 126, 234, 0.75),
+        rgba(102, 126, 234, 0.75)
+      ),
+      url("bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+}
+
+.login-form {
+    background:rgba(255,255,255,0.55);
+    padding:30px;
+    border-radius: 16px;
+    width:350px;
+    box-shadow:0 10px 25px
+    rgba(0,0,0,0.2);
+}
+input{
+    margin-bottom:10px;
+}
+.button {
+    background-color:#667eea;
+    color:white;
+    border:none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+a {
+    color:#1e3a8a;
+    text-decoration:none;
+    font-weight:600;
+}
+a:hover {
+    text-decoration:underline
+}

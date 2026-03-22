@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student registration form</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for ('static',filename = 'register.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for ('static' , filename = 'common.css') }}"
+    />
+  </head>
+  <body>
+    <form class="details" action="/register" method="POST">
+      {% if error %}
+      <p style="color:red;font-weight:bold;">{{ error }}</p>
+      {% endif %}
+      <h4 class="heading">Fill this for registration</h4>
+      <label for="name">First Name</label><br />
+      <input
+        type="text"
+        id="name"
+        name="Fname"
+        placeholder="Enter your first name"
+        value="{{request.form.get('Fname','')}}"
+      /><br />
+      <label for="lastname">Last name</label><br />
+      <input
+        type="text"
+        id="lastname"
+        name="Lname"
+        placeholder="Enter your last"
+        value="{{request.form.get('Lname','')}}"
+      /><br />
+      <label for="mail">E-mail</label><br />
+      <input
+        type="text"
+        id="mail"
+        name="email"
+        placeholder="Enter your E-mail"
+        value="{{request.form.get('email','')}}"
+      /><br />
+      <label for="dob">Date of Birth</label><br />
+      <input
+        type="date"
+        id="dob"
+        name="dob"
+        placeholder="YYYY-MM-DD"
+        value="{{request.form.get('dob','')}}"
+        maxlength="10"
+        min="1980-01-01"
+        max="2030-01-01 required"
+      />
+      <br />
+      <label for="Uname">Set Username</label><br />
+      <input
+        type="text"
+        id="Uname"
+        name="username"
+        placeholder="Set username"
+        value="{{request.form.get('username','')}}"
+      /><br />
+      <label for="pass">Set password</label><br />
+      <input
+        type="text"
+        id="pass"
+        name="password"
+        placeholder="Set password"
+        value="{{request.form.get('password','')}}"
+      /><br />
+      <label class="main">Gender</label>
+      <div class="gender">
+        <div class="gender-row">
+          <span>Male</span>
+          <input type="radio" name="gender" value="Male" />
+        </div>
+        <div class="gender-row">
+          <span>Female</span>
+          <input type="radio" name="gender" value="Female" />
+        </div>
+        <div class="gender-row">
+          <span>Others</span>
+          <input type="radio" name="gender" value="Others" />
+        </div>
+      </div>
+
+      <label class="course" for="course">Course</label>
+      <select id="course" name="course">
+        <option class="op" value="">---Select Course---</option>
+        <option value="python">python</option>
+        <option value="javascript">javascript</option>
+        <option value="web development">web development</option>
+        <option value="Data science">Data science</option>
+        <option value="Database">Database</option></select
+      ><br />
+      <button type="Submit">Register</button>
+    </form>
+  </body>
+</html>

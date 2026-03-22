@@ -1,0 +1,150 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* MAIN LAYOUT */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 230px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* 🔥 DASHBOARD BOX (same style as welcome) */
+.dashboard-box {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 10px;
+
+  /* 🔥 same modern gradient */
+  background: linear-gradient(135deg, #667eea, #764ba2);
+
+  color: white;
+  font-weight: bold;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* text inside */
+.dashboard-box h3 {
+  margin: 0;
+}
+.logo {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #d6a36a;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #b9824c;
+}
+
+.delete {
+  background: #e74c3c;
+}
+
+.delete:hover {
+  background: #c0392b;
+}
+
+.logout {
+  background: #34495e;
+}
+
+.logout:hover {
+  background: #2c3e50;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+/* 🔥 MODERN WELCOME BOX */
+.welcome-box {
+  width: fit-content;
+  margin: 0 auto 25px auto;
+  padding: 12px 30px;
+  border-radius: 12px;
+
+  /* 🔥 modern gradient */
+  background: linear-gradient(135deg, #667eea, #764ba2);
+
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* heading inside box */
+.welcome-box h2 {
+  margin: 0;
+}
+
+/* 🔥 CARD (AUTO WIDTH BASED ON CONTENT) */
+.card {
+  width: fit-content;      /* 🔥 content ke hisaab se */
+  min-width: 600px;        /* 🔥 minimum size */
+  margin: auto;
+  padding: 30px 40px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* 🔥 ROWS (PERFECT ALIGNMENT) */
+.row {
+  display: grid;
+  grid-template-columns: 180px auto; /* label fixed, value auto */
+  align-items: center;
+  gap: 30px;
+
+  padding: 14px 20px;
+  margin: 15px 0;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+}
+
+/* LABEL */
+.row span {
+  font-weight: bold;
+  color: #222;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+/* VALUE */
+.row p {
+  margin: 0;
+  color: #111;
+  font-weight: 500;
+  white-space: nowrap; /* 🔥 ek line me hi */
+  font-size: 15px;
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for ('static' , filename = 'home.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for ('static' , filename = 'common.css') }}"
+    />
+  </head>
+  <body>
+
+  <div class="container">
+
+    <!-- LEFT MENU -->
+    <div class="sidebar">
+      <div class="dashboard-box"><h3>Dashboard</h3>
+        </div>
+
+      <form action="{{url_for('update',id=user.id)}}" method="GET">
+        <button class="btn">Update</button>
+      </form>
+
+      <form action="{{url_for('delete',id = user.id)}}" method="POST">
+        <button class="btn delete">Delete</button>
+      </form>
+
+      <a href="{{url_for ('login')}}">
+        <button class="btn">Exit</button>
+      </a>
+
+      <form action="{{url_for('logout')}}" method="POST">
+        <button class="btn logout">Logout</button>
+      </form>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="main-content">
+      <div class="welcome-box"><h2>Welcome {{user.first_name}}</h2>
+        </div>
+
+      <div class="card">
+        <div class="row">
+          <span>Name</span>
+          <p>{{user.first_name}} {{user.last_name}}</p>
+        </div>
+
+        <div class="row">
+          <span>Email</span>
+          <p>{{user.email}}</p>
+        </div>
+
+        <div class="row">
+          <span>Date of Birth</span>
+          <p>{{user.date_of_birth}}</p>
+        </div>
+
+        <div class="row">
+          <span>Gender</span>
+          <p>{{user.gender}}</p>
+        </div>
+
+        <div class="row">
+          <span>Course</span>
+          <p>{{user.course}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
